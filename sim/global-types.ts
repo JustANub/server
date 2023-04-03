@@ -32,7 +32,6 @@ type SparseStatsTable = Partial<StatsTable>;
 type BoostID = StatIDExceptHP | 'accuracy' | 'evasion';
 type BoostsTable = {[boost in BoostID]: number };
 type SparseBoostsTable = Partial<BoostsTable>;
-type Nonstandard = 'Past' | 'Future' | 'Unobtainable' | 'CAP' | 'LGPE' | 'Custom' | 'Gigantamax';
 
 type PokemonSet = import('./teams').PokemonSet;
 
@@ -64,7 +63,6 @@ namespace TierTypes {
 	export type Singles = "AG" | "Uber" | "(Uber)" | "OU" | "(OU)" | "UUBL" | "UU" | "RUBL" | "RU" | "NUBL" | "NU" |
 	"(NU)" | "PUBL" | "PU" | "(PU)" | "NFE" | "LC";
 	export type Doubles = "DUber" | "(DUber)" | "DOU" | "(DOU)" | "DBL" | "DUU" | "(DUU)" | "NFE" | "LC";
-	export type Other = "Unreleased" | "Illegal" | "CAP" | "CAP NFE" | "CAP LC";
 }
 
 interface EventInfo {
