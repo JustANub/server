@@ -6288,4 +6288,28 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+	hyneth: {
+		tier: "COU",
+		isNonstandard: "COU",
+	},
+	marule: {
+		tier: "COU",
+		isNonstandard: "COU",
+	},
+	giovanna: {
+		tier: "COU",
+		isNonstandard: "COU",
+	},
+	giovannahandball: {
+		tier: "COU",
+		isNonstandard: "COU",
+	},
+	gustavo: {
+		tier: "COU",
+		isNonstandard: "COU",
+	},
+	jartho: {
+		tier: "COU",
+		isNonstandard: "COU",
+	},
 };

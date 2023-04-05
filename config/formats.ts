@@ -431,6 +431,12 @@ export const Formats: FormatList = [
 			}
 		},
 	},
+	{
+		name: "[Gen 9] COU",
+		mod: 'gen9',
+		ruleset: ['Standard CS', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod'],
+		banlist: ['ND RU', 'ND RUBL', 'ND UU', 'ND UUBL', 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass'],
+	},
 
 	// Pet Mods
 	///////////////////////////////////////////////////////////////////

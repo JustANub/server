@@ -88,6 +88,7 @@ export const Aliases: {[alias: string]: string} = {
 	mayhem: "[Gen 9] Random Battle Mayhem",
 	omotm: "[Gen 9] Pokebilities",
 	lcotm: "[Gen 9] Cross Evolution",
+	cou: "[Gen 9] COU",
 
 	// mega evos
 	fabio: "Ampharos-Mega",
@@ -296,6 +297,7 @@ export const Aliases: {[alias: string]: string} = {
 	taurospaldea: "Tauros-Paldea-Combat",
 	taurospaldeafire: "Tauros-Paldea-Blaze",
 	taurospaldeawater: "Tauros-Paldea-Aqua",
+	giovannahandball: "Giovanna-Handball",
 
 	// base formes
 	nidoranfemale: "Nidoran-F",
@@ -349,6 +351,7 @@ export const Aliases: {[alias: string]: string} = {
 	ufof: "Pokestar UFO",
 	ufoflying: "Pokestar UFO",
 	vivillonmeadow: "Vivillon",
+	giovanna: "Giovanna",
 
 	// event formes
 	rockruffdusk: "Rockruff",

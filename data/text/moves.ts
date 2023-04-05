@@ -7443,4 +7443,19 @@ export const MovesText: {[k: string]: MoveText} = {
 			shortDesc: "Nearly always goes first. Always crits.",
 		},
 	},
+	bodycrush: {
+		name: "Body Crush",
+		desc: "This attack charges on the first turn and executes on the second. OHKO's the target if it connects.",
+		shortDesc: "Charges turn 1. Hits turn 2. OHKO's the target.",
+	},
+	obsessivepassion: {
+		name: "Obsessive Passion",
+		desc: "Power doubles if the target has a non-volatile status condition also having a 40% chance to confuse.",
+		shortDesc: "Power doubles if the target is statused. 40% to confuse.",
+	},
+	spectralshell: {
+		name: "Spectral Shell",
+		desc: "Damage is calculated using the user's Special Defense stat as its Special Attack, including stat stage changes. Other effects that modify the Special Attack stat are used as normal.",
+		shortDesc: "Uses user's SpD stat as SpA in damage calculation.",
+	},
 };

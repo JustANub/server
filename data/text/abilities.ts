@@ -2163,4 +2163,24 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+	sippingsoda: {
+		name: "Sipping Soda",
+		desc: "This Pokemon's Speed is raised by 1 stage at the end of 3 full turns it has been on the field.",
+		shortDesc: "This Pokemon's Speed is raised 1 stage at the end of 3 full turns on the field.",
+	},
+	sportchange: {
+		name: "Sport Change",
+		desc: "If this Pokemon is an Giovanna, it changes to Handball Forme before using an Special move, and changes to Soccer Forme before using a Physical move.",
+		shortDesc: "Giovanna changes Forme to Handball before Special moves and Soccer before Physical moves.",
+	},
+	performanceehancer: {
+		name: "Performance Enhancer",
+		desc: "The first turn on the field, this pokemon gains a 1.3 boost to Attack and Special Attack and a 1.5 boost to Speed.",
+		shortDesc: "Gives a 1.3 boost to Atk and SpA and 1.5 Speed for the first turn in the field",
+	},
+	withdraw: {
+		name: "Withdraw",
+		desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage from an attack bringing it to 1/2 or less of its maximum HP, its Defense and Special Defense are raised by 1 stage, and its Speed is lowered by 1 stage. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
+		shortDesc: "At 1/2 or less of this Pokemon's max HP: +1 Def, Sp. Def and -1 Spe",
+	}
 };

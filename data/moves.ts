@@ -21595,4 +21595,57 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cool",
 	},
+	bodycrush: {
+		num: 6000,
+		accuracy: 70,
+		basePower: 0,
+		category: "Physical",
+		name: "Body Crush",
+		pp: 5,
+		priority: 0,
+		flags: {charge: 1, contact: 1, protect: 1, mirror: 1},
+		ohko: true,
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	obsessivepassion: {
+		num: 6001,
+		accuracy: 100,
+		basePower: 75,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		category: "Special",
+		name: "Obsessive Passion",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 40,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Ghost",
+		contestType: "Clever"
+	},
+	spectralshell: {
+		num: 6002,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Spectral Shell",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		overrideOffensiveStat: 'spd',
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+	},
 };

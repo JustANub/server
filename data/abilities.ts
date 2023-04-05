@@ -5213,4 +5213,79 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -4,
 	},
+	sippingsoda: {
+        onResidualOrder: 28,
+        onResidualSubOrder: 2,
+        onResidual(pokemon) {
+            if (pokemon.activeTurns) {
+                if (pokemon.boosts.spe < 3)
+                {
+                this.boost({spe: 1})
+                }
+            }
+        },
+        name: "Sipping Soda",
+        rating: 4.5,
+        num: 6000,
+	},
+	sportchange: {
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Giovanna' || attacker.transformed) return;
+			if (move.category === 'Physical') return;
+			const targetForme = (move.category === 'Special' ? 'Giovanna' : 'Giovanna-Handball');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		isPermanent: true,
+		name: "Sport Change",
+		rating: 4,
+		num: 6001,
+	},
+	performanceenhancer: {
+		onStart(pokemon) {
+			if (this.effectState.performanceBoost) return;
+			if (this.boost({atk: 0.3, spa: 0.3, spe: 1}, pokemon)) {
+				this.effectState.performanceBoost = true;
+				return null;
+			}
+		},
+		name: "Performance Enhancer",
+		rating: 4,
+		num: 6002,
+	},
+	withdraw: {
+		onDamage(damage, target, source, effect) {
+			if (
+				effect.effectType === "Move" &&
+				!effect.multihit &&
+				(!effect.negateSecondary && !(effect.hasSheerForce && source.hasAbility('sheerforce')))
+			) {
+				this.effectState.checkedAngerShell = false;
+			} else {
+				this.effectState.checkedAngerShell = true;
+			}
+		},
+		onTryEatItem(item) {
+			const healingItems = [
+				'aguavberry', 'enigmaberry', 'figyberry', 'iapapaberry', 'magoberry', 'sitrusberry', 'wikiberry', 'oranberry', 'berryjuice',
+			];
+			if (healingItems.includes(item.id)) {
+				return this.effectState.checkedAngerShell;
+			}
+			return true;
+		},
+		onAfterMoveSecondary(target, source, move) {
+			this.effectState.checkedAngerShell = true;
+			if (!source || source === target || !target.hp || !move.totalDamage) return;
+			const lastAttackedBy = target.getLastAttackedBy();
+			if (!lastAttackedBy) return;
+			const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
+			if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
+				this.boost({def: 1, spd: 1, spe: -1}, target, target);
+			}
+		},
+		name: "Withdraw",
+		rating: 4,
+		num: 6003,
+	},
 };
