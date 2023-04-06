@@ -19328,4 +19328,16 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
         eggGroups: ["Undiscovered"],
 		gen: 9,
 	},
+	mallascular: {
+        num: -696,
+        name: "Mallascular",
+        types: ["Dragon", "Water"],
+        baseStats: {hp: 60, atk: 120, def: 53, spa: 120, spd: 60, spe: 111},
+        abilities: {0: "Moxie", H: "Sheer Force"},
+        heightm: 1.3,
+        weightkg: 66.8,
+        color: "Blue",
+        eggGroups: ["Undiscovered"],
+		gen: 9,
+	},
 };

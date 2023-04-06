@@ -21648,4 +21648,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ghost",
 	},
+	dracobarrage: {
+		num: 6003,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Draco Barrage",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+	},
 };

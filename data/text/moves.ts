@@ -7458,4 +7458,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Damage is calculated using the user's Special Defense stat as its Special Attack, including stat stage changes. Other effects that modify the Special Attack stat are used as normal.",
 		shortDesc: "Uses user's SpD stat as SpA in damage calculation.",
 	},
+	dracobarrage: {
+		name: "Draco Barrage",
+		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
+		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
+	},
 };

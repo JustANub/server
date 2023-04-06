@@ -6290,26 +6290,30 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	hyneth: {
 		tier: "COU",
-		isNonstandard: "COU",
+		natDexTier: "COU",
 	},
 	marule: {
 		tier: "COU",
-		isNonstandard: "COU",
+		natDexTier: "COU",
 	},
 	giovanna: {
 		tier: "COU",
-		isNonstandard: "COU",
+		natDexTier: "COU",
 	},
 	giovannahandball: {
 		tier: "COU",
-		isNonstandard: "COU",
+		natDexTier: "COU",
 	},
 	gustavo: {
 		tier: "COU",
-		isNonstandard: "COU",
+		natDexTier: "COU",
 	},
 	jartho: {
 		tier: "COU",
-		isNonstandard: "COU",
+		natDexTier: "COU",
+	},
+	mallascular: {
+		tier: "COU",
+		natDexTier: "COU",
 	},
 };

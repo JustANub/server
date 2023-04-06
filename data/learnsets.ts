@@ -94606,4 +94606,20 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			terablast: ["9M"],
 		}
 	},
+	mallascular: {
+		learnset: {
+			hydrocannon: ["9L1"],
+			dragonclaw: ["9L1", "9L24"],
+			dracometeor: ["9L1"],
+			dragondance: ["9L1", "9L36"],
+			dragonrage: ["9L5"],
+			bubble: ["9L8"],
+			dragonbreath: ["9L12"],
+			incinerate: ["9L15"],
+			flamethrower: ["9L48"],
+			surf: ["9L64"],
+			hydropump: ["9L72"],
+			dracobarrage: ["9L99"],
+		}
+	},
 };
