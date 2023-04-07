@@ -19333,7 +19333,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
         name: "Mallascular",
         types: ["Dragon", "Water"],
         baseStats: {hp: 60, atk: 120, def: 53, spa: 120, spd: 60, spe: 111},
-        abilities: {0: "Moxie", H: "Sheer Force"},
+        abilities: {0: "Cold Blooded", H: "Sheer Force"},
         heightm: 1.3,
         weightkg: 66.8,
         color: "Blue",

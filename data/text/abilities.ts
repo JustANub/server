@@ -2182,5 +2182,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Withdraw",
 		desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage from an attack bringing it to 1/2 or less of its maximum HP, its Defense and Special Defense are raised by 1 stage, and its Speed is lowered by 1 stage. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
 		shortDesc: "At 1/2 or less of this Pokemon's max HP: +1 Def, Sp. Def and -1 Spe",
-	}
+	},
+	coldblooded: {
+		name: "Cold Blooded",
+		desc: "This Pokemon's Heals 25% of its max HP if it attacks and knocks out another Pokemon.",
+		shortDesc: "This Pokemon's Heals 25% of its max HP if it attacks and knocks out another Pokemon.",
+	},
 };

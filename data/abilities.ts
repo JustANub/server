@@ -4120,7 +4120,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	stancechange: {
 		onModifyMovePriority: 1,
-		onModifyMove(move, attacker, defender) {
+		onModifyMove(move, attacker) {
 			if (attacker.species.baseSpecies !== 'Aegislash' || attacker.transformed) return;
 			if (move.category === 'Status' && move.id !== 'kingsshield') return;
 			const targetForme = (move.id === 'kingsshield' ? 'Aegislash' : 'Aegislash-Blade');
@@ -5229,18 +5229,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         num: 6000,
 	},
 	sportchange: {
-		onModifyMovePriority: 1,
-		onModifyMove(move, attacker, defender) {
-			if (attacker.species.baseSpecies !== 'Giovanna' || attacker.transformed) return;
-			if (move.category === 'Physical') return;
-			const targetForme = (move.category === 'Special' ? 'Giovanna' : 'Giovanna-Handball');
-			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
-		},
-		isPermanent: true,
-		name: "Sport Change",
-		rating: 4,
-		num: 6001,
-	},
+        onModifyMovePriority: 1,
+        onModifyMove(move, attacker, defender) {
+            if (attacker.species.baseSpecies !== 'Giovanna' || attacker.transformed) return;
+            if (move.category === 'Status') return;
+            const targetForme = (move.category === 'Physical' ? 'Giovanna' : 'Giovanna-Handball');
+            if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+        },
+        isPermanent: true,
+        name: "Sport Change",
+        rating: 4,
+        num: 6001,
+    }, 
 	performanceenhancer: {
 		onStart(pokemon) {
 			if (this.effectState.performanceBoost) return;
@@ -5288,4 +5288,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 6003,
 	},
+	coldblooded: {
+		onSourceAfterFaint(length, target, source, effect, pokemon) {
+			if (effect && effect.effectType === 'Move') {
+				this.heal(pokemon.baseMaxhp / 4);
+			}
+		},
+		name: "Cold Blooded",
+		rating: 3,
+		num: 6004,
+	},	
 };
