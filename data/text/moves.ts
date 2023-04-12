@@ -7463,4 +7463,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
 		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
 	},
+	floralblessing: {
+		name: "Floral Blessing",
+		desc: "Every Pokemon in the user's party is cured of its non-volatile status condition. Heals the user by 25% of it max HP.",
+		shortDesc: "Cures the user's party of all status conditions. Heals user by 25%."
+	},
 };

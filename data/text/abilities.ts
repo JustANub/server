@@ -2185,7 +2185,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	coldblooded: {
 		name: "Cold Blooded",
-		desc: "This Pokemon's Heals 25% of its max HP if it attacks and knocks out another Pokemon.",
-		shortDesc: "This Pokemon's Heals 25% of its max HP if it attacks and knocks out another Pokemon.",
+		desc: "This Pokemon Heals 25% of its max HP if it attacks and knocks out another Pokemon.",
+		shortDesc: "This Pokemon Heals 25% of its max HP if it attacks and knocks out another Pokemon.",
+	},
+	floralhealing: {
+		name: "Floral Healing",
+		desc: "This Pokemon Heals 12.5% of the damage dealt by a Grass or Fairy type move.",
+		shortDesc: "This Pokemon Heals 12.5% of the damage dealt by a Grass or Fairy move.",
 	},
 };

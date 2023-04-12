@@ -5228,29 +5228,31 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         rating: 4.5,
         num: 6000,
 	},
-	sportchange: {
-        onModifyMovePriority: 1,
-        onModifyMove(move, attacker, defender) {
-            if (attacker.species.baseSpecies !== 'Giovanna' || attacker.transformed) return;
-            if (move.category === 'Status') return;
-            const targetForme = (move.category === 'Physical' ? 'Giovanna' : 'Giovanna-Handball');
-            if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
-        },
-        isPermanent: true,
-        name: "Sport Change",
-        rating: 4,
-        num: 6001,
-    }, 
-	performanceenhancer: {
-		onStart(pokemon) {
-			if (this.effectState.performanceBoost) return;
-			if (this.boost({atk: 0.3, spa: 0.3, spe: 1}, pokemon)) {
-				this.effectState.performanceBoost = true;
-				return null;
+	kickstart: {
+		onModifyAtk(atk, attacker, defender, move) {
+			if (attacker.activeMoveActions > 1) return;
+			this.debug('Kickstart attack boost');
+			return this.chainModify([4915, 4096]);
+		},
+		onModifySpe(spe, pokemon) {
+			// probably not > 1 because speed is determined before the move action is run
+			if (pokemon.activeMoveActions > 0) return;
+			return this.chainModify(1.5);
+		},
+	name: "Kickstart",
+	rating: 4,
+	num: 6001,
+	},
+	striker: {
+		onBasePowerPriority: 43,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['kick']) {
+				this.debug('Striker Boost');
+				return this.chainModify([5325, 4096]);
 			}
 		},
-		name: "Performance Enhancer",
-		rating: 4,
+		name: "Striker",
+		rating: 3,
 		num: 6002,
 	},
 	withdraw: {
@@ -5289,13 +5291,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 6003,
 	},
 	coldblooded: {
-		onSourceAfterFaint(length, target, source, effect, pokemon) {
+		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
-				this.heal(pokemon.baseMaxhp / 4);
+				source.heal(source.maxhp / 4);
+				this.add('-heal', source, source.getHealth);
 			}
 		},
 		name: "Cold Blooded",
 		rating: 3,
 		num: 6004,
+	},
+	floralhealing: {
+		onModifyMove(move, pokemon) {
+			if (move.type === 'Grass' ||move.type === 'Fairy' ) {
+				if(!move.drain) move.drain = [1, 8];
+			}
+		},
+		name: "Floral Healing",
+		rating: 3,
+		num: 6005,
 	},	
 };

@@ -6316,4 +6316,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "COU",
 		natDexTier: "COU",
 	},
+	flonaria: {
+		tier: "COU",
+		natDexTier: "COU",
+	},
 };
