@@ -6296,11 +6296,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "COU",
 		natDexTier: "COU",
 	},
-	giovanna: {
-		tier: "COU",
-		natDexTier: "COU",
-	},
-	giovannahandball: {
+	sportress: {
 		tier: "COU",
 		natDexTier: "COU",
 	},
@@ -6317,6 +6313,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "COU",
 	},
 	flonaria: {
+		tier: "COU",
+		natDexTier: "COU",
+	},
+	jairo: {
+		tier: "COU",
+		natDexTier: "COU",
+	},
+	samuel: {
 		tier: "COU",
 		natDexTier: "COU",
 	},

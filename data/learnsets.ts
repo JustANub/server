@@ -94454,7 +94454,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 		terablast: ["9M"],
 		}
 	},
-	giovanna: {
+	sportress: {
 		learnset: {
 			pyroball: ["9L1"],
 			courtchange: ["9L1"],
@@ -94773,5 +94773,72 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			solarbeam: ["9M"],
 			terablast: ["9M"],
 		}
+	},
+	jairo: {
+		learnset: {
+			meteorassault: ["9L1"],
+			healbell: ["9L1"],
+			stealthrock: ["9L1", "9M"],
+			ceaselessedge: ["9L1"],
+			rocksmash: ["9L5"],
+			magnetrise: ["9L8"],
+			metalclaw: ["9L12", "9M"],
+			detect: ["9L15"],
+			submission: ["9L24"],
+			smartstrike: ["9L36", "9M"],
+			ironhead: ["9L48", "9M"],
+			earthquake: ["9L64", "9M"],
+			closecombat: ["9L72", "9M"],
+			armordown: ["9L99"],
+			takedown: ["9M"],
+			mudslap: ["9M"],
+			scaryface: ["9M"],
+			protect: ["9M"],
+			hiddenpower: ["9M"],
+			trailblaze: ["9M"],
+			chargebeam: ["9M"],
+			facade: ["9M"],
+			aerialace: ["9M"],
+			bulldoze: ["9M"],
+			rocktomb: ["9M"],
+			fling: ["9M"],
+			sunnyday: ["9M"],
+			raindance: ["9M"],
+			falseswipe: ["9M"],
+			brickbreak: ["9M"],
+			zenheadbutt: ["9M"],
+			shadowclaw: ["9M"],
+			bulkup: ["9M"],
+			bodyslam: ["9M"],
+			firepunch: ["9M"],
+			thunderpunch: ["9M"],
+			icepunch: ["9M"],
+			drainpunch: ["9M"],
+			reflect: ["9M"],
+			thunderwave: ["9M"],
+			poisonjab: ["9M"],
+			rest: ["9M"],
+			rockslide: ["9M"],
+			bodypress: ["9M"],
+			flashcannon: ["9M"],
+			substitute: ["9M"],
+			irondefense: ["9M"],
+			heavyslam: ["9M"],
+			encore: ["9M"],
+			helpinghand: ["9M"],
+			batonpass: ["9M"],
+			reversal: ["9M"],
+			stoneedge: ["9M"],
+			gigaimpact: ["9M"],
+			steelbeam: ["9M"],
+			terablast: ["9M"],
+		}
+	},
+	samuel: {
+		learnset: {
+			
+			
+			gunkshot: ["9M"],
+		}	
 	},
 };

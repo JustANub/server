@@ -3773,11 +3773,8 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	marule: {
 		name: "Marule",
 	},
-	giovanna: {
-		name: "Giovanna",
-	},
-	giovannahandball: {
-		name: "Giovanna-Handball",
+	sportress: {
+		name: "Sportress",
 	},
 	gustavo: {
 		name: "Gustavo",
@@ -3787,5 +3784,8 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	flonaria: {
 		name: "Flonaria",
+	},
+	jairo: {
+		name: "Jairo",
 	},
 };

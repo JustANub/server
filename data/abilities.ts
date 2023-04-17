@@ -5310,5 +5310,32 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Floral Healing",
 		rating: 3,
 		num: 6005,
+	},
+	royalguard: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Prism Armor neutralize');
+				return this.chainModify(0.75);
+			}
+		},
+		name: "Royal Guard",
+		rating: 4.5,
+		num: 6006,
+	},
+	disjunction: {
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Poison'] = true;
+			}
+		},
+		onEffectiveness(typeMod, target, type, move) {
+			if (move.type === 'Poison') {
+			    (type === 'Steel'); return 1;
+			}
+		},
+		name: "Disjunction",
+		rating: 3,
+		num: 6007,
 	},	
 };

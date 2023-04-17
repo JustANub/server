@@ -7468,4 +7468,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Every Pokemon in the user's party is cured of its non-volatile status condition. Heals the user by 25% of it max HP.",
 		shortDesc: "Cures the user's party of all status conditions. Heals user by 25%."
 	},
+	armordown: {
+		name: "Armor Down",
+		desc: "The user restores 3/4 of its maximum HP, rounded half up. If this move is successful and the user is not Terastallized, the user's Steel type becomes typeless as long as it remains active.",
+		shortDesc: "Heals the user by 75% of its max HP. User's Steel type becomes typeless; must be Steel."
+	},
 };

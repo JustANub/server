@@ -2168,15 +2168,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's Speed is raised by 1 stage at the end of 3 full turns it has been on the field.",
 		shortDesc: "This Pokemon's Speed is raised 1 stage at the end of 3 full turns on the field.",
 	},
-	sportchange: {
-		name: "Sport Change",
-		desc: "If this Pokemon is an Giovanna, it changes to Handball Forme before using an Special move, and changes to Soccer Forme before using a Physical move.",
-		shortDesc: "Giovanna changes Forme to Handball before Special moves and Soccer before Physical moves.",
+	striker: {
+		name: "Striker",
+		desc: "This Pokemon's kick moves have their power multiplied by 1.3.",
+		shortDesc: "This Pokemon's kick moves have 1.3x power.",
 	},
-	performanceehancer: {
-		name: "Performance Enhancer",
-		desc: "The first turn on the field, this pokemon gains a 1.3 boost to Attack and Special Attack and a 1.5 boost to Speed.",
-		shortDesc: "Gives a 1.3 boost to Atk and SpA and 1.5 Speed for the first turn in the field",
+	kickstart: {
+		name: "Kickstart",
+		desc: "The first turn on the field, this pokemon gains a 1.3 boost to Attack and a 1.5 boost to Speed.",
+		shortDesc: "Gives a 1.3 boost to Atk and 1.5 Speed for the first turn in the field",
 	},
 	withdraw: {
 		name: "Withdraw",
@@ -2192,5 +2192,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Floral Healing",
 		desc: "This Pokemon Heals 12.5% of the damage dealt by a Grass or Fairy type move.",
 		shortDesc: "This Pokemon Heals 12.5% of the damage dealt by a Grass or Fairy move.",
+	},
+	royalguard: {
+		name: "Royal Guard",
+		desc: "This Pokemon receives 3/4 damage from supereffective attacks.",
+		shortDesc: "This Pokemon receives 3/4 damage from supereffective attacks.",
+	},
+	disjunction: {
+		name: "Disjunction",
+		desc: "This Pokemon Poison type moves deal Super effective on Steel.",
+		shortDesc: "This Pokemon Poison type moves deal Super effective on Steel.",
 	},
 };

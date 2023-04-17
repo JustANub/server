@@ -21665,7 +21665,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	floralblessing: {
-		num: 215,
+		num: 6004,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21687,5 +21687,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "allyTeam",
 		type: "Grass",
 		contestType: "Beautiful",
+	},
+	armordown: {
+		num: 6005,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Armor Down",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		heal: [3, 4],
+		onTryMove(pokemon, target, move) {
+			if (pokemon.hasType('Steel')) return;
+			this.add('-fail', pokemon, 'move: Armor Down');
+			this.attrLastMove('[still]');
+			return null;
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Steel" ? "???" : type));
+				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Armor Down');
+			},
+		},
+		target: "self",
+		type: "Steel",
+		contestType: "Clever",
 	},
 };
